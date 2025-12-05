@@ -47,7 +47,7 @@ Sistema web de red social moderno con React y Firebase. Permite a los usuarios c
 
 ```bash
 # 1. Clonar repositorio
-git clone https://github.com/tu-usuario/socialhub.git
+git clone https://github.com/KatherineMatosM/Proyecto-Muro-Interactivo.git
 cd socialhub
 
 # 2. Instalar dependencias
