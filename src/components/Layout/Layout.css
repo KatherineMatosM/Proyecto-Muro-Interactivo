@@ -1,0 +1,269 @@
+/* src/components/Layout/Layout.css */
+
+.header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(122, 204, 225, 0.2);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo-button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.logo-button:hover {
+  background: rgba(122, 204, 225, 0.05);
+  transform: translateX(4px);
+}
+
+.logo-icon {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #7acce1 0%, #5ab4d1 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  box-shadow: 0 6px 20px rgba(122, 204, 225, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.logo-button:hover .logo-icon {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+.ping {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 14px;
+  height: 14px;
+  background: #fb6999;
+  border-radius: 50%;
+  border: 2px solid white;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.logo-text h1 {
+  font-size: 30px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #7acce1, #5ab4d1, #4a9fc7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1;
+}
+
+.logo-text p {
+  font-size: 13px;
+  color: #888;
+  font-weight: 600;
+  margin: 4px 0 0 0;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(122, 204, 225, 0.15), rgba(201, 227, 245, 0.15));
+  padding: 10px 18px;
+  border-radius: 18px;
+  border: 2px solid rgba(122, 204, 225, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-badge:hover {
+  background: linear-gradient(135deg, rgba(122, 204, 225, 0.25), rgba(201, 227, 245, 0.25));
+  border-color: rgba(122, 204, 225, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(122, 204, 225, 0.2);
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(122, 204, 225, 0.4);
+}
+
+.user-info {
+  text-align: left;
+}
+
+.user-name {
+  font-weight: 800;
+  color: #333;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.user-username {
+  font-size: 13px;
+  color: #7acce1;
+  margin: 2px 0 0 0;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 48px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(122, 204, 225, 0.2);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content p {
+  color: #999;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.footer-year {
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* Back Button Utility */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #e0e0e0;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.back-button:hover {
+  background: white;
+  border-color: #7acce1;
+  color: #7acce1;
+  transform: translateX(-4px);
+  box-shadow: 0 4px 16px rgba(122, 204, 225, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+  
+  .logo-button {
+    margin: 0 auto;
+  }
+  
+  .header-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .user-badge {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .logo-text h1 {
+    font-size: 26px;
+  }
+  
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav {
+    gap: 8px;
+  }
+  
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  
+  .user-name,
+  .user-username {
+    display: none;
+  }
+  
+  .user-badge {
+    padding: 8px;
+    width: auto;
+  }
+}
