@@ -18,7 +18,7 @@ Sistema web de red social moderno con React y Firebase. Permite a los usuarios c
 ![PostCard](public/img/PostCard.png)
 
 ### Publicacion
-![PostPublicacion](public/img/PostPublicacion.png)
+![PostPublicacion](public/img/CardPublicacion.png)
 
 ---
 
